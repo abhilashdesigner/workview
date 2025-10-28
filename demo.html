@@ -16,6 +16,11 @@
 
 <section class="selected-works h-screen" id="sW" data-persistent="" data-scroll-section="">
 <div class="list-projects">
+<div class="project-box">
+<div class="arrow-down"><span></span><span></span></div>
+<div class="project-heading"><h3>MORE PROJECTS THAT BROUGHT IDEAS TO LIFE</h3></div>
+<div class="project-text font-nats text-[12px] md:text-[16px] text-[#351A12] md:text-[#351A12] md:pr-0">Each case study reflects intentional design paired with scalable solutions. We have collaborated with forward-thinking <br class="br-d">brands to translate vision into value, building identities that elevate businesses and evolve with them.</div>
+</div>
 <a href="" class="project" aria-label="Nés pour mener" name="Nés pour mener" data-scroll="" data-scroll-repeat="" data-scroll-offset="50%, 50%" data-scroll-call="changeBG" data-background="#133A74" data-next-color="DFD3C3" style="color: #DFD3C3">
 <div class="project-marquee" aria-hidden="true" data-scroll="" data-scroll-direction="horizontal" data-scroll-speed="8">
 	<div class="project-marquee_img"><img src="tb-1.jpg" alt=""></div>
@@ -53,7 +58,6 @@
 <div class="project-marquee_img"><img src="fahome-3.jpg" alt=""></div>
 	
 	<div class="project-marquee_img"><img src="fahome-1.jpg" alt=""></div>
-	<div class="project-marquee_img mobile-view"><img src="fahome-1.jpg" alt=""></div>
 	<h3><p><span>Brand Identity</span><span>Web design</span></p><name>FA Home</name></h3>
 	<div class="project-marquee_img"><img src="fahome-5.jpg" alt=""></div>
 	<div class="project-marquee_img"><img src="fahome-4.jpg" alt=""></div>
@@ -104,12 +108,23 @@
     font-style: normal
 }
 body{background:#F0E5D6;}
+.project-box{display:flex; margin:0px 50px;align-items: center;position: relative;}
+.project-heading{padding-right:15px;}
+.project-text{line-height:25px;}
+.project-heading h3 {
+    display: inline-block;
+    padding: 0px 30px;
+    color: #351A12;
+    font-size: 20px;
+    font-family: Nats;
+    text-transform: uppercase;
+}
 .selected-works .list-projects .project::before{display:none;}
-.project{margin-bottom:180px;}
+.project, .project-box{margin-bottom:180px;}
 .selected-works_title{color:#351A12!important;}
 .project-marquee h3{padding:0px 15px;}
 .project-marquee h3 span{display: inline-block;font-family: 'NATS'; color:#351A12; font-size:20px; font-family: Nats; text-transform:uppercase;}
-.project-marquee h3 name{font-size:90px;color:#351A12; font-family: Monthis;display: block;}
+.project-marquee h3 name{font-size:95px;color:#351A12; font-family: Monthis;display: block;}
 .project-marquee h3 p{ font-size:12px; padding-left:0%;line-height: 14px;
     margin-bottom: 0;
     padding-bottom: 0;}
@@ -117,9 +132,34 @@ body{background:#F0E5D6;}
 .project-marquee div img{ width:255px; height:auto;margin: 0px 21px;}
 .project-marquee{margin: 0px -35vw;padding-top:0px;}
 .project-marquee_img {display: contents;}
-	.mobile-view{display:none;}
+.arrow-down{
+  width:1px;
+  height:41px;
+  display :inline-block;
+  position: relative;
+  background-color :#D2ADCE;
+  margin :0 1rem;
+}
+  .arrow-down span{
+    top :38px;
+    position :absolute;
+    width :5px;
+    height :1px;
+    background-color :#D2ADCE;
+    display :inline-block;
+  
+}
+    .arrow-down span:first-of-type{
+      left: 0;
+      transform :rotate(-45deg);
+}
+    .arrow-down span:last-of-type{
+      right :0;
+      transform: rotate(-135deg);
+}
+.br-d{display:block;}
+.br-m{display:none}
 @media (max-width: 768px) {
-	.mobile-view{display:contents;}
 .project-marquee h3 name {
     font-size: 40px;
     color: #351A12;
@@ -134,29 +174,42 @@ body{background:#F0E5D6;}
 	.project-marquee div img{
 width: 130px;
     height: auto;}
-	 
-.project {
+	 .project-box {
+    margin: 0px 30px;
+}
+.project, .project-box{
     margin-bottom: 140px;
 }
 .project-marquee h3 p span:first-child {
     padding-right: 20px;
     padding-bottom: 0;
 }
-	.selected-works .list-projects .project:hover+.project{
-    opacity: 0.2;
-    transition: opacity .5s;
+.project-box {
+    display: block;
+}
+.project-heading{ padding-left: 30px;padding-right:0px;}
+.project-heading h3 {
+    display: inline-block;
+    padding: 0px ;}
+
+.arrow-down {
+    width: 1px;
+    height: 60px;
+   
+    position: absolute;
+  
+    margin: 0;
+    left: 0;}
+	.br-d{display:none;}
+	.br-m{display:block}
+	.arrow-down span {
+    top: 57px;}
+	.project-text {padding-left: 30px;
+    line-height: 20px;
 }
 
 }
 </style>
-
-
-
-
-
-
-
-
 
 
 
